@@ -7,6 +7,7 @@ class GameViewModel: ObservableObject {
     
     private let infiniteMode: Bool
     private let settings: SettingsManager
+    private var playerMoves: [Player: [(Int, Int)]] = [Player.x: [], Player.o: []]
     
     init(infiniteMode: Bool, settings: SettingsManager) {
         self.infiniteMode = infiniteMode
@@ -19,9 +20,8 @@ class GameViewModel: ObservableObject {
         board = Array(repeating: Array(repeating: Cell(), count: size), count: size)
         currentPlayer = .x
         winner = nil
+        playerMoves = [Player.x: [], Player.o: []]
     }
-    
-    private var playerMoves: [Player: [(Int, Int)]] = [Player.x: [], Player.o: []]
     
     func makeMove(row: Int, col: Int) {
         guard board[row][col].player == nil else { return }
