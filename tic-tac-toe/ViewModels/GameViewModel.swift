@@ -4,6 +4,8 @@ class GameViewModel: ObservableObject {
     @Published var board: [[Cell]] = []
     @Published var currentPlayer: Player = .x
     @Published var winner: Player? = nil
+    @Published var winningLineStart: (Int, Int)? = nil
+    @Published var winningLineEnd: (Int, Int)? = nil
     
     private let infiniteMode: Bool
     private let settings: SettingsManager
@@ -20,6 +22,8 @@ class GameViewModel: ObservableObject {
         board = Array(repeating: Array(repeating: Cell(), count: size), count: size)
         currentPlayer = .x
         winner = nil
+        winningLineStart = nil
+        winningLineEnd = nil
         playerMoves = [Player.x: [], Player.o: []]
     }
     
@@ -37,8 +41,10 @@ class GameViewModel: ObservableObject {
         }
         
         // Проверяем победу
-        if checkWinner() {
+        if let (start, end) = checkWinningLine(for: currentPlayer) {
             winner = currentPlayer
+            winningLineStart = start
+            winningLineEnd = end
         } else if !self.infiniteMode && isBoardFull() {
             winner = Player.tie
         } else {
@@ -47,24 +53,24 @@ class GameViewModel: ObservableObject {
         }
     }
     
-    // TODO: rewrite
-    private func checkWinner() -> Bool {
+    // TODO: rewrite for diff board sizes
+    private func checkWinningLine(for player: Player) -> ((Int, Int), (Int, Int))? {
         let size = settings.boardSize
         for i in 0..<size {
             if board[i][0].player == currentPlayer && board[i][1].player == currentPlayer && board[i][2].player == currentPlayer {
-                return true
+                return ((i, 0), (i, 2))
             }
             if board[0][i].player == currentPlayer && board[1][i].player == currentPlayer && board[2][i].player == currentPlayer {
-                return true
+                return ((0, i), (2, i))
             }
         }
         if board[0][0].player == currentPlayer && board[1][1].player == currentPlayer && board[2][2].player == currentPlayer {
-            return true
+            return ((0, 0), (2, 2))
         }
         if board[0][2].player == currentPlayer && board[1][1].player == currentPlayer && board[2][0].player == currentPlayer {
-            return true
+            return ((0, 2), (2, 0))
         }
-        return false
+        return nil
     }
     
     private func isBoardFull() -> Bool {
@@ -84,7 +90,7 @@ class GameViewModel: ObservableObject {
         switch player {
         case .x: return settings.playerXColor
         case .o: return settings.playerOColor
-        case .tie: return Color.black
+        case .tie: return Color.primary
         }
     }
     

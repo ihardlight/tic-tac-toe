@@ -21,27 +21,22 @@ struct GameView: View {
                         .font(.largeTitle)
                         .foregroundColor(viewModel.color(for: winner))
                         .padding()
-                    Button(NSLocalizedString("restart", comment: "Restart button")) {
-                        viewModel.resetGame()
-                    }
-                    .padding()
-                    .background(Color.accentColor)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .frame(maxWidth: .infinity, alignment: .center) // Центрируем по ширине
                 } else {
                     Text("\(viewModel.name(for: viewModel.currentPlayer)) (\(viewModel.symbol(for: viewModel.currentPlayer))) \(NSLocalizedString("turn", comment: "Turn message"))")
-                        .font(.title)
+                        .font(.largeTitle)
                         .padding()
-                    
-                    // Вычисляем размеры ячеек
-                    let gridSize = viewModel.board.count
-                    let cellSize = min(geometry.size.width, geometry.size.height) / CGFloat(gridSize) - 20
-                    
-                    // Расчет шрифта и размера ячеек для iPad
-                    let isIPad = UIDevice.current.userInterfaceIdiom == .pad
-                    let fontSize: CGFloat = isIPad ? 100 : 50 // Увеличиваем размер шрифта для iPad
-                    
+                }
+
+                // Вычисляем размеры ячеек
+                let gridSize = viewModel.board.count
+                let cellSize = min(geometry.size.width, geometry.size.height) / CGFloat(gridSize) - 20
+                
+                // Расчет шрифта и размера ячеек для iPad
+                let isIPad = UIDevice.current.userInterfaceIdiom == .pad
+                let fontSize: CGFloat = isIPad ? 100 : 50 // Увеличиваем размер шрифта для iPad
+                let lineWidth: CGFloat = isIPad ? 10 : 5
+                
+                ZStack {
                     VStack(spacing: 10) {
                         ForEach(0..<gridSize, id: \.self) { row in
                             HStack(spacing: 10) {
@@ -61,9 +56,27 @@ struct GameView: View {
                             }
                         }
                     }
-                    .padding()
-                    .frame(maxWidth: .infinity, alignment: .center) // Центрируем по ширине
+
+                    if let start = viewModel.winningLineStart, let end = viewModel.winningLineEnd, let winner = viewModel.winner {
+                        WinningLine(gridSize: gridSize, start: start, end: end)
+                            .stroke(viewModel.color(for: winner), lineWidth: lineWidth)
+                            .animation(.easeInOut, value: winner)
+                    }
+                    
                 }
+                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center) // Центрируем по ширине
+
+                    Button(NSLocalizedString("restart", comment: "Restart button")) {
+                        viewModel.resetGame()
+                    }
+                    .padding()
+                    .background(Color.accentColor)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .frame(maxWidth: .infinity, alignment: .center) // Центрируем по ширине
+                    .opacity(viewModel.winner != nil ? 1.0 : 0.0)
+
             }
             .frame(maxWidth: .infinity, alignment: .center) // Центрируем по ширине
             .background(Color(UIColor.systemBackground))
@@ -72,6 +85,10 @@ struct GameView: View {
     }
 }
 
-#Preview {
+#Preview("Classic mode") {
     GameView(infiniteMode: false)
+}
+
+#Preview("Infinity mode") {
+    GameView(infiniteMode: true)
 }
