@@ -1,0 +1,510 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ (%@) %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$@) %3$@"
+          }
+        }
+      }
+    },
+    "3 x 3" : {
+
+    },
+    "4 x 4" : {
+
+    },
+    "5 x 5" : {
+
+    },
+    "board_settings" : {
+      "comment" : "Board settings",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Board"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Игровое поле"
+          }
+        }
+      }
+    },
+    "board_size" : {
+      "comment" : "Board Size",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Size"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Размер поля"
+          }
+        }
+      }
+    },
+    "cancel" : {
+      "comment" : "Cancel",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "color" : {
+      "comment" : "Color",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Color"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "цвет"
+          }
+        }
+      }
+    },
+    "colors_must_be_different" : {
+      "comment" : "Colors must be different",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colors must be different"
+          }
+        }
+      }
+    },
+    "edit" : {
+      "comment" : "Edit",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit"
+          }
+        }
+      }
+    },
+    "edit_players" : {
+      "comment" : "Edit Players",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit players"
+          }
+        }
+      }
+    },
+    "game_classic_mode" : {
+      "comment" : "Classic game mode",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classic"
+          }
+        }
+      }
+    },
+    "game_infinity_mode" : {
+      "comment" : "Game mode without ties",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Infinity"
+          }
+        }
+      }
+    },
+    "game_tab" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "game"
+          }
+        }
+      }
+    },
+    "game_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tic-Tac-Toe"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Крестики-нолики"
+          }
+        }
+      }
+    },
+    "main_screen" : {
+      "comment" : "Main Screen Title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main screen"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Главный экран"
+          }
+        }
+      }
+    },
+    "name" : {
+      "comment" : "Name",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "ok" : {
+      "comment" : "OK",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ok"
+          }
+        }
+      }
+    },
+    "player_name" : {
+      "comment" : "Name"
+    },
+    "player_o" : {
+      "comment" : "Default Player O Name\nPlayer O",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Player 2"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Игрок 2"
+          }
+        }
+      }
+    },
+    "player_o_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Player O"
+          }
+        }
+      }
+    },
+    "player_settings" : {
+      "comment" : "Player settings",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Player"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Игроки"
+          }
+        }
+      }
+    },
+    "player_turn" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Player's turn: %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ход игрока: %@"
+          }
+        }
+      }
+    },
+    "player_x" : {
+      "comment" : "Default Player X Name\nPlayer X",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Player 1"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Игрок 1"
+          }
+        }
+      }
+    },
+    "player_x_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Player X"
+          }
+        }
+      }
+    },
+    "reset" : {
+      "comment" : "Reset",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
+          }
+        }
+      }
+    },
+    "reset_settings" : {
+      "comment" : "Reset to Default",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset Settings"
+          }
+        }
+      }
+    },
+    "reset_settings_message" : {
+      "comment" : "Are you sure you want to reset all settings to default values?",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to reset all settings to default values?"
+          }
+        }
+      }
+    },
+    "reset_settings_title" : {
+      "comment" : "Reset Settings",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset settings"
+          }
+        }
+      }
+    },
+    "restart" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restart"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать заново"
+          }
+        }
+      }
+    },
+    "save" : {
+      "comment" : "Save",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "settings" : {
+      "comment" : "Settings title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Настройки"
+          }
+        }
+      }
+    },
+    "symbol" : {
+      "comment" : "Symbol",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Символ"
+          }
+        }
+      }
+    },
+    "symbols_must_be_different" : {
+      "comment" : "Symbols must be different"
+    },
+    "tie" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It's a tie!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ничья!"
+          }
+        }
+      }
+    },
+    "tie_name" : {
+      "comment" : "Tie Name",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tie"
+          }
+        }
+      }
+    },
+    "turn" : {
+      "comment" : "Turn message",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Ход"
+          }
+        }
+      }
+    },
+    "validation_error" : {
+      "comment" : "Validation Error"
+    },
+    "welcome" : {
+      "comment" : "Welcome message",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Привет!"
+          }
+        }
+      }
+    },
+    "winner" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ wins!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ победил!"
+          }
+        }
+      }
+    },
+    "wins" : {
+      "comment" : "Wins message",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "wins"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Победил"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
