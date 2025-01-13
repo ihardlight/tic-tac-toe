@@ -6,7 +6,7 @@ struct ContentView: View {
             NavigationView {
                 MainView()
             }
-                .navigationTitle(NSLocalizedString("main_screen", comment: "Main Screen Title"))
+            .navigationTitle("main_screen".localized(comment: "Main Screen Title"))
                 .tabItem {
                     Image(systemName: "gamecontroller")
                 }

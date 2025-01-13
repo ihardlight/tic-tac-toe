@@ -1,16 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@ (%@) %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ (%2$@) %3$@"
-          }
-        }
-      }
-    },
     "3 x 3" : {
 
     },
@@ -22,6 +12,7 @@
     },
     "board_settings" : {
       "comment" : "Board settings",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -39,6 +30,7 @@
     },
     "board_size" : {
       "comment" : "Board Size",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -56,6 +48,7 @@
     },
     "cancel" : {
       "comment" : "Cancel",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -67,6 +60,7 @@
     },
     "color" : {
       "comment" : "Color",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -84,6 +78,7 @@
     },
     "colors_must_be_different" : {
       "comment" : "Colors must be different",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -95,6 +90,7 @@
     },
     "edit" : {
       "comment" : "Edit",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -106,6 +102,7 @@
     },
     "edit_players" : {
       "comment" : "Edit Players",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -117,6 +114,7 @@
     },
     "game_classic_mode" : {
       "comment" : "Classic game mode",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -128,6 +126,7 @@
     },
     "game_infinity_mode" : {
       "comment" : "Game mode without ties",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -165,8 +164,26 @@
         }
       }
     },
+    "language" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        }
+      }
+    },
     "main_screen" : {
       "comment" : "Main Screen Title",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -184,6 +201,7 @@
     },
     "name" : {
       "comment" : "Name",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -195,6 +213,7 @@
     },
     "ok" : {
       "comment" : "OK",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -204,11 +223,9 @@
         }
       }
     },
-    "player_name" : {
-      "comment" : "Name"
-    },
     "player_o" : {
       "comment" : "Default Player O Name\nPlayer O",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -237,6 +254,7 @@
     },
     "player_settings" : {
       "comment" : "Player settings",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -271,6 +289,7 @@
     },
     "player_x" : {
       "comment" : "Default Player X Name\nPlayer X",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -299,6 +318,7 @@
     },
     "reset" : {
       "comment" : "Reset",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -310,6 +330,7 @@
     },
     "reset_settings" : {
       "comment" : "Reset to Default",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -321,6 +342,7 @@
     },
     "reset_settings_message" : {
       "comment" : "Are you sure you want to reset all settings to default values?",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -332,6 +354,7 @@
     },
     "reset_settings_title" : {
       "comment" : "Reset Settings",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -360,6 +383,7 @@
     },
     "save" : {
       "comment" : "Save",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -371,6 +395,7 @@
     },
     "settings" : {
       "comment" : "Settings title",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -388,6 +413,7 @@
     },
     "symbol" : {
       "comment" : "Symbol",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -402,9 +428,6 @@
           }
         }
       }
-    },
-    "symbols_must_be_different" : {
-      "comment" : "Symbols must be different"
     },
     "tie" : {
       "extractionState" : "manual",
@@ -425,6 +448,7 @@
     },
     "tie_name" : {
       "comment" : "Tie Name",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -434,8 +458,12 @@
         }
       }
     },
+    "Timer Duration" : {
+
+    },
     "turn" : {
       "comment" : "Turn message",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -451,11 +479,9 @@
         }
       }
     },
-    "validation_error" : {
-      "comment" : "Validation Error"
-    },
     "welcome" : {
       "comment" : "Welcome message",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -490,6 +516,7 @@
     },
     "wins" : {
       "comment" : "Wins message",
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

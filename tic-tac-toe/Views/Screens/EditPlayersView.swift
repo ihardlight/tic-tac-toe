@@ -16,18 +16,18 @@ struct EditPlayersView: View {
                 ForEach(playerSettings.indices, id: \.self) { index in
                     Section(header: Text(playerSettings[index].title)) {
                         HStack {
-                            Text(NSLocalizedString("name", comment: "Name"))
+                            Text("name".localized(comment: "Name"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             
-                            TextField(NSLocalizedString("player_name", comment: "Name"), text: $playerSettings[index].name)
+                            TextField("player_name".localized(comment: "Name"), text: $playerSettings[index].name)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         
                         HStack {
-                            Text(NSLocalizedString("symbol", comment: "Symbol"))
+                            Text("symbol".localized(comment: "Symbol"))
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                            TextField(NSLocalizedString("symbol", comment: "Symbol"), text: $playerSettings[index].symbol)
+                            TextField("symbol".localized(comment: "Symbol"), text: $playerSettings[index].symbol)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .onChange(of: playerSettings[index].symbol) {
@@ -37,16 +37,16 @@ struct EditPlayersView: View {
                                 }
                         }
                         
-                        ColorPicker(NSLocalizedString("color", comment: "Color"), selection: $playerSettings[index].color)
+                        ColorPicker("color".localized(comment: "Color"), selection: $playerSettings[index].color)
                     }
                 }
             }
-            .navigationTitle(NSLocalizedString("edit_players", comment: "Edit Players"))
+            .navigationTitle("edit_players".localized(comment: "Edit Players"))
             .navigationBarItems(
-                leading: Button(NSLocalizedString("cancel", comment: "Cancel")) {
+                leading: Button("cancel".localized(comment: "Cancel")) {
                     presentationMode.wrappedValue.dismiss()
                 },
-                trailing: Button(NSLocalizedString("save", comment: "Save")) {
+                trailing: Button("save".localized(comment: "Save")) {
                     if validate() {
                         onSave(playerSettings)
                         presentationMode.wrappedValue.dismiss()
@@ -57,9 +57,9 @@ struct EditPlayersView: View {
             )
             .alert(isPresented: $showValidationError) {
                 Alert(
-                    title: Text(NSLocalizedString("validation_error", comment: "Validation Error")),
+                    title: Text("validation_error".localized(comment: "Validation Error")),
                     message: Text(validationErrorMessage),
-                    dismissButton: .default(Text(NSLocalizedString("ok", comment: "OK")))
+                    dismissButton: .default(Text("ok".localized(comment: "OK")))
                 )
             }
         }
@@ -68,13 +68,13 @@ struct EditPlayersView: View {
     private func validate() -> Bool {
         let symbols = playerSettings.map { $0.symbol }
         if Set(symbols).count != symbols.count {
-            validationErrorMessage = NSLocalizedString("symbols_must_be_different", comment: "Symbols must be different")
+            validationErrorMessage = "symbols_must_be_different".localized(comment: "Symbols must be different")
             return false
         }
         
         let colors = playerSettings.map { $0.color }
         if Set(colors).count != colors.count {
-            validationErrorMessage = NSLocalizedString("colors_must_be_different", comment: "Colors must be different")
+            validationErrorMessage = "colors_must_be_different".localized(comment: "Colors must be different")
             return false
         }
         
@@ -83,17 +83,17 @@ struct EditPlayersView: View {
 }
 
 #Preview {
-    var settings = SettingsManager()
+    let settings = SettingsManager()
     EditPlayersView(
         playerSettings: [
             PlayerSettings(
-                title: NSLocalizedString("player_x", comment: "Player X"),
+                title: "player_x".localized(comment: "Player X"),
                 name: settings.playerXName,
                 symbol: settings.playerXSymbol,
                 color: settings.playerXColor
             ),
             PlayerSettings(
-                title: NSLocalizedString("player_o", comment: "Player O"),
+                title: "player_o".localized(comment: "Player O"),
                 name: settings.playerOName,
                 symbol: settings.playerOSymbol,
                 color: settings.playerOColor

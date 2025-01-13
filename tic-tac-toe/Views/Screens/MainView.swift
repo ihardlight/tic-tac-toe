@@ -10,12 +10,12 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         VStack {
-            Text(NSLocalizedString("welcome", comment: "Welcome message"))
+            Text("welcome".localized(comment: "Welcome message"))
                 .font(.largeTitle)
                 .padding()
 
             NavigationLink(destination: GameView(infiniteMode: false)) {
-                Text(NSLocalizedString("game_classic_mode", comment: "Classic game mode"))
+                Text("game_classic_mode".localized(comment: "Classic game mode"))
                     .font(.title2)
                     .padding()
                     .frame(maxWidth: .infinity)
@@ -26,7 +26,7 @@ struct MainView: View {
             }
 
             NavigationLink(destination: GameView(infiniteMode: true)) {
-                Text(NSLocalizedString("game_infinity_mode", comment: "Game mode without ties"))
+                Text("game_infinity_mode".localized(comment: "Game mode without ties"))
                     .font(.title2)
                     .padding()
                     .frame(maxWidth: .infinity)

@@ -6,6 +6,7 @@ class GameViewModel: ObservableObject {
     @Published var winner: Player? = nil
     @Published var winningLineStart: (Int, Int)? = nil
     @Published var winningLineEnd: (Int, Int)? = nil
+    @Published var timer = GameTimer()
     
     private let infiniteMode: Bool
     private let settings: SettingsManager
@@ -25,6 +26,13 @@ class GameViewModel: ObservableObject {
         winningLineStart = nil
         winningLineEnd = nil
         playerMoves = [Player.x: [], Player.o: []]
+        timer.resetTimer(duration: settings.timerDuration)
+    }
+    
+    func abortGameTimerExpired() {
+        if (settings.timerEnabled) {
+            winner = currentPlayer == Player.x ? Player.o : Player.x
+        }
     }
     
     func makeMove(row: Int, col: Int) {
@@ -45,11 +53,16 @@ class GameViewModel: ObservableObject {
             winner = currentPlayer
             winningLineStart = start
             winningLineEnd = end
+            timer.stopTimer()
         } else if !self.infiniteMode && isBoardFull() {
             winner = Player.tie
+            timer.stopTimer()
         } else {
             // Смена игрока
             currentPlayer = currentPlayer == Player.x ? Player.o : Player.x
+            if (settings.timerEnabled) {
+                timer.startTimer(duration: settings.timerDuration)
+            }
         }
     }
     
@@ -77,6 +90,16 @@ class GameViewModel: ObservableObject {
         return !board.flatMap { $0 }.contains { $0.player == nil }
     }
     
+    var title: String {
+        get {
+            switch winner {
+            case nil: return "\(name(for: currentPlayer)) (\(symbol(for: currentPlayer))) \("turn".localized(comment: "Turn message"))"
+            case .tie: return "tie".localized(comment: "Tie message")
+            case .x, .o: return "\(name(for: winner!)) (\(symbol(for: winner))) \("wins".localized(comment: "Wins message"))!"
+            }
+        }
+    }
+    
     func symbol(for player: Player?) -> String {
         switch player {
         case .x: return settings.playerXSymbol
@@ -98,7 +121,7 @@ class GameViewModel: ObservableObject {
         switch player {
         case .x: return settings.playerXName
         case .o: return settings.playerOName
-        case .tie: return NSLocalizedString("tie_name", comment: "Tie Name")
+        case .tie: return "tie_name".localized(comment: "Tie Name")
         }
     }
 }
